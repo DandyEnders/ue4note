@@ -9,7 +9,7 @@ int main()
     
     // Declare variables
     const int CodeA = 4;
-    const int CodeB = 1;
+    const int CodeB = 3;
     const int CodeC = 2;
 
     /*
