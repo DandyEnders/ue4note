@@ -1,6 +1,6 @@
 #include <iostream>
 
-int main()
+void PlayGame()
 {
     // Print welcome messages to the terminal.
     std::cout << "Hello, world!" << std::endl;
@@ -38,6 +38,7 @@ int main()
     std::cout << "Guess sum is: " << GuessSum << std::endl;
     std::cout << "Guess product is: " << GuessProduct << std::endl;
 
+    // Check if player's guess is correct
     if (GuessSum == CodeSum && GuessProduct == CodeProduct)
     {
         std::cout << "You win!" << std::endl;
@@ -47,6 +48,12 @@ int main()
         std::cout << "You lose!" << std::endl;
     }
     
+
+}
+
+int main()
+{
+    PlayGame();
 
     return 0;
 }
