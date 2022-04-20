@@ -8,21 +8,24 @@ int main()
     std::cout << "You need to enter the correct codes to continue..." << std::endl;
     
     // Declare variables
-    const int a = 4;
-    const int b = 1;
-    const int c = 2;
+    const int CodeA = 4;
+    const int CodeB = 1;
+    const int CodeC = 2;
 
     /*
     Multiline comments
     */
      
-    const int sum = a + b + c;
-    const int product = a * b * c;
+    const int CodeSum = CodeA + CodeB + CodeC;
+    const int CodeProduct = CodeA * CodeB * CodeC;
 
-    // Print sum and products to the terminal.
+
+    // Print CodeSum and CodeProduct to the terminal.
     std::cout << "+ There are 3 numbers in the code" << std::endl;
-    std::cout << "+ The code add-up to: " << sum << std::endl; 
-    std::cout << "+ The code multiplies to: " << product << std::endl; 
+    std::cout << "+ The code add-up to: " << CodeSum << std::endl; 
+    std::cout << "+ The code multiplies to: " << CodeProduct << std::endl; 
+
+    int PlayerGuess;
 
     return 0;
 }
