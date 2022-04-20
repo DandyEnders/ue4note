@@ -25,7 +25,19 @@ int main()
     std::cout << "+ The code add-up to: " << CodeSum << std::endl; 
     std::cout << "+ The code multiplies to: " << CodeProduct << std::endl; 
 
-    int PlayerGuess;
+    int GuessA, GuessB, GuessC;
+    std::cin >> GuessA;
+    std::cin >> GuessB;
+    std::cin >> GuessC;
+    std::cout << "You entered: " << GuessA << GuessB << GuessC << std::endl;
+
+    int GuessSum, GuessProduct;
+    GuessSum = GuessA + GuessB + GuessC;
+    GuessProduct = GuessA * GuessB * GuessC;
+    
+    std::cout << "Guess sum is: " << GuessSum << std::endl;
+    std::cout << "Guess product is: " << GuessProduct << std::endl;
+
 
     return 0;
 }
