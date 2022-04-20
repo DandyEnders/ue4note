@@ -1,11 +1,18 @@
 #include <iostream>
 
-void PlayGame()
+void PrintIntroduction()
 {
     // Print welcome messages to the terminal.
-    std::cout << "Hello, world!" << std::endl;
+    std::cout << "Hello, world!!!!!!!!!!!!!!" << std::endl;
     std::cout << "You are a secret agent breaking into a secure server room." << std::endl;
     std::cout << "You need to enter the correct codes to continue..." << std::endl;
+    
+}
+
+void PlayGame()
+{
+
+    PrintIntroduction();
 
     // Declare variables
     const int CodeA = 4;
@@ -54,6 +61,6 @@ void PlayGame()
 int main()
 {
     PlayGame();
-
+     
     return 0;
 }
