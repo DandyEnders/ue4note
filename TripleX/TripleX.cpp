@@ -1,23 +1,24 @@
 #include <iostream>
+#include <ctime>
 
-void PrintIntroduction()
+void PrintIntroduction(int Difficulty)
 {
     // Print welcome messages to the terminal.
     std::cout << "Hello, world!!!!!!!!!!!!!!" << std::endl;
-    std::cout << "You are a secret agent breaking into a secure server room." << std::endl;
+    std::cout << "You are a secret agent breaking into a " << Difficulty << std::endl;
     std::cout << "You need to enter the correct codes to continue..." << std::endl;
     
 }
 
-bool PlayGame()
+bool PlayGame(int Difficulty)
 {
 
-    PrintIntroduction();
+    PrintIntroduction(Difficulty);
 
     // Declare variables
-    const int CodeA = 4;
-    const int CodeB = 3;
-    const int CodeC = 2;
+    const int CodeA = rand() % Difficulty + Difficulty;
+    const int CodeB = rand() % Difficulty + Difficulty;
+    const int CodeC = rand() % Difficulty + Difficulty;
 
     /*
     Multiline comments
@@ -59,14 +60,23 @@ bool PlayGame()
 }
 
 int main()
-{
-    while (true)
+{   
+    srand(time(NULL));
+    const int MaxDifficulty = 10;
+    int LevelDifficulty = 1;
+    while (LevelDifficulty <= MaxDifficulty)
     {
-        bool bLevelComplete = PlayGame();
+        bool bLevelComplete = PlayGame(LevelDifficulty);
         std::cin.clear();
         std::cin.ignore();
+
+        if (bLevelComplete)
+        {
+           LevelDifficulty += 1; 
+        }
     }
     
+    std::cout << "Congratulations! You finished the game!";
 
      
     return 0;
